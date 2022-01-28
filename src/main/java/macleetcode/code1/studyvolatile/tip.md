@@ -1,0 +1,1 @@
+TestVolatile和VolatileDemo 两个例子，有些jdk版本不加volatile也可以保证可见性

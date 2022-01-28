@@ -1,0 +1,98 @@
+package macleetcode.code1.consumerandprovider;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/**
+ * @Author: WYF
+ * @Description:
+ * @Create: 2020/3/27 16:01
+ * @Version: 1.0
+ */
+public class NewVersion {
+    public static void main(String[] args) {
+        MyResource myResource = new MyResource(new ArrayBlockingQueue<>(10));
+        new Thread(() -> {
+            System.out.println(Thread.currentThread().getName() + "\t生产线程启动");
+            try {
+                myResource.myProd();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, "Prod").start();
+        new Thread(() -> {
+            System.out.println(Thread.currentThread().getName() + "\t消费线程启动");
+            try {
+                myResource.myConsumer();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, "Consumer").start();
+
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("5s后main叫停，线程结束");
+        try {
+            myResource.stop();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class MyResource {
+    /**
+     * flag 标志 生产和消费的进行
+     */
+    private volatile boolean flag = true;
+    /**
+     * 要插入的队列的数据，作为标识
+    */
+    private AtomicInteger atomicInteger = new AtomicInteger();
+    BlockingQueue<String> blockingQueue = null;
+
+    public MyResource(BlockingQueue blockingQueue) {
+        this.blockingQueue = blockingQueue;
+        System.out.println(blockingQueue.getClass().getName());
+    }
+
+    public void myProd() throws Exception {
+        String data = null;
+        boolean retValue;
+        while (flag) {
+            data = atomicInteger.incrementAndGet() + "";
+            retValue = blockingQueue.offer(data, 2, TimeUnit.SECONDS);
+            if (retValue) {
+                System.out.println(Thread.currentThread().getName() + "\t 插入" + data + "ok");
+            } else {
+                System.out.println(Thread.currentThread().getName() + "\t 插入" + data + "no");
+            }
+            TimeUnit.SECONDS.sleep(1);
+        }
+        System.out.println(Thread.currentThread().getName() + "\t大老板叫停了，flag=false，生产结束");
+    }
+
+    public void myConsumer() throws Exception {
+        String result = null;
+        while (flag) {
+            result = blockingQueue.poll(2, TimeUnit.SECONDS);
+            if (null == result || result.equalsIgnoreCase("")) {
+                flag = false;
+                System.out.println(Thread.currentThread().getName() + "\t超过2s没有取到蛋糕，消费退出");
+                System.out.println();
+                return;
+            }
+            System.out.println(Thread.currentThread().getName() + "\t 消费" + result + "成功");
+        }
+    }
+
+    public void stop() throws Exception {
+        flag = false;
+    }
+
+}
