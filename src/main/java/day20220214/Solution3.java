@@ -1,10 +1,14 @@
 package day20220214;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Solution3 {
+    /**
+     * 三数之和，难度在去重
+     * @param nums
+     * @return
+     */
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         quickSort(nums,0,nums.length-1);
