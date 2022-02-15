@@ -11,6 +11,10 @@ package day20220215;
  * }
  */
 class Solution6 {
+    /**
+     * 重排链表
+     * @param head
+     */
     public void reorderList(ListNode head) {
         if (head == null) {
             return;
