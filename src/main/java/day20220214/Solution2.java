@@ -22,4 +22,20 @@ public class Solution2 {
         }
         return ans;
     }
+
+    public int lengthOfLongestSubstring2(String s) {
+        char[] chars = s.toCharArray();
+        int max = 0;
+        int left = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+            if (map.containsKey(aChar)) {
+                left = Math.max(left,map.get(aChar)+1);
+            }
+            map.put(aChar,i);
+            max = Math.max(max,i-left+1);
+        }
+        return max;
+    }
 }

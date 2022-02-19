@@ -86,8 +86,8 @@ public class Solution2 {
         ListNode dummyNode = new ListNode(-1);
         dummyNode.next = head;
         ListNode pre = dummyNode;
-        for (int i = 0; i < left - 1; i++) {
-            pre = pre.next;
+        for (int i = 0; i < left -1 ; i++) {
+            pre = dummyNode.next;
         }
         ListNode curr = pre.next;
         ListNode next = pre.next.next;

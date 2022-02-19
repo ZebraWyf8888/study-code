@@ -26,6 +26,18 @@ public class Solution4 {
         return pre;
     }
 
+    public ListNode reverseList3(ListNode head) {
+        ListNode pre = null;
+        ListNode now = head;
+        while (now != null){
+            ListNode next = now.next;
+            now.next = pre;
+            pre = now;
+            now = next;
+        }
+        return pre;
+    }
+
 
     /**
      * 以链表1->2->3->4->5举例
@@ -42,7 +54,7 @@ public class Solution4 {
             return head;
         }
         //递归传入下一个节点，目的是为了到达最后一个节点
-        ListNode newHead = reverseList(head.next);
+        ListNode newHead = reverseList2(head.next);
                 /*
             第一轮出栈，head为5，head.next为空，返回5
             第二轮出栈，head为4，head.next为5，执行head.next.next=head也就是5.next=4，
