@@ -716,12 +716,12 @@ public class Main {
 
     //56 区间合并
     public int[][] merge(int[][] intervals) {
-        List<int[]> res = new ArrayList<>();
-        if (intervals.length == 0 || intervals == null) return res.toArray(new int[0][]);
+        List<int[]> merged = new ArrayList<>();
+        if (intervals == null || intervals.length == 0 ) return merged.toArray(new int[0][]);
         // 对起点终点进行排序
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
-        int i = 0;
-        while (i < intervals.length) {
+//        int i = 0;
+       /* while (i < intervals.length) {
             int left = intervals[i][0];
             int right = intervals[i][1];
             // 如果有重叠，循环判断哪个起点满足条件
@@ -733,8 +733,35 @@ public class Main {
             res.add(new int[]{left, right});
             // 接着判断下一个区间
             i++;
+        }*/
+
+        for (int[] interval : intervals) {
+            int L = interval[0];
+            int R = interval[1];
+            if (merged.size() == 0 || merged.get(merged.size() - 1)[1] < L) {
+                merged.add(new int[]{L, Math.max(R, merged.get(merged.size() - 1)[1])});
+            } else {
+                merged.get(merged.size() - 1)[1] = Math.max(R, merged.get(merged.size() - 1)[1]);
+            }
         }
-        return res.toArray(new int[0][]);
+        return merged.toArray(new int[0][]);
+    }
+
+    public int[][] merge2(int[][] intervals) {
+        if (intervals.length == 0) {
+            return new int[0][2];
+        }
+        Arrays.sort(intervals, (interval1, interval2) -> interval1[0] - interval2[0]);
+        List<int[]> merged = new ArrayList<int[]>();
+        for (int[] interval : intervals) {
+            int L = interval[0], R = interval[1];
+            if (merged.size() == 0 || merged.get(merged.size() - 1)[1] < L) {
+                merged.add(new int[]{L, R});
+            } else {
+                merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], R);
+            }
+        }
+        return merged.toArray(new int[merged.size()][]);
     }
 
     //19、删除倒数第k个节点

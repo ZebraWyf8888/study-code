@@ -1,6 +1,6 @@
 package day20211129;
 
-import dfsandbfs.Soultion2;
+import dfsandbfs.Solution2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
