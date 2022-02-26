@@ -7,6 +7,9 @@ public class Solution3 {
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode hair = new ListNode(-1);
         hair.next = head;
+        /**
+         * 四个核心：pre、next；head、tail
+         */
         ListNode pre = hair;
         while (head != null){
             ListNode tail = pre;
@@ -41,7 +44,6 @@ public class Solution3 {
             prev = p;
             p = nex;
         }
-
         return new ListNode[]{tail,head};
     }
 
