@@ -51,7 +51,7 @@ public class Solution2 {
         List<Integer> ans = new ArrayList<>();
         LinkedList<TreeNode> objects = new LinkedList<>();
         objects.push(root);
-        while (root != null|| objects.isEmpty()){
+        while (root != null|| !objects.isEmpty()){
             while (root != null){
                 root = root.left;
                 objects.push(root);
