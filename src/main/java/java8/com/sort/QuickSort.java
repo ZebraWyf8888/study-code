@@ -59,4 +59,33 @@ public class QuickSort {
         sort(arr, low, j - 1);
         sort(arr, j + 1, high);
     }
+
+    public void quickSort3(int[] a,int low,int high){
+        if(low > high){
+            return;
+        }
+        int i = low;
+        int j = high;
+        int temp ;
+
+        while(i<j){
+            while(i<j && a[j] <= a[low]){
+                j--;
+            }
+            while(i<j && a[i] >= a[low]){
+                i++;
+            }
+            if (i < j) {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+        temp = a[i];
+        a[i] = a[low];
+        a[low] = temp;
+
+        quickSort3(a,low,i-1);
+        quickSort3(a,j+1,high);
+    }
 }
