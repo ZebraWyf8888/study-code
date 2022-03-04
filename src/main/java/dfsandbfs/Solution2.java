@@ -3,6 +3,7 @@ package dfsandbfs;
 
 
 import leetcode20220116.ListNode;
+import macleetcode.tree.TreeNode;
 
 import java.util.*;
 
@@ -45,24 +46,18 @@ public class Solution2 {
      * @param root
      */
     public List<Integer> inorderTraversal(TreeNode root) {
-        if (root == null) {
-            return Collections.emptyList();
-        }
-        List<Integer> ans = new ArrayList<>();
-        LinkedList<TreeNode> objects = new LinkedList<>();
-        objects.push(root);
-        while (root != null|| !objects.isEmpty()){
-            while (root != null){
+        List<Integer> res = new ArrayList<Integer>();
+        Deque<TreeNode> stk = new LinkedList<TreeNode>();
+        while (root != null || !stk.isEmpty()) {
+            while (root != null) {
+                stk.push(root);
                 root = root.left;
-                objects.push(root);
             }
-            TreeNode pop = objects.pop();
-            ans.add(pop.val);
-            if (pop.right != null) {
-                objects.push(pop.right);
-            }
+            root = stk.pop();
+            res.add(root.val);
+            root = root.right;
         }
-        return ans;
+        return res;
     }
 
     /**

@@ -1,5 +1,7 @@
 package dfsandbfs;
 
+import macleetcode.tree.TreeNode;
+
 /**
  * @Author: WYF
  * @Description: 求最大/最小深度
@@ -30,12 +32,24 @@ public class GetDepth {
      * @Author: WYF
      * @Date: 2020/4/18 15:10
      */
-    public static int getMinDepth(Node treeNode) {
-        if (treeNode == null) {
+    public int minDepth(TreeNode root) {
+        if (root == null) {
             return 0;
         }
-        int leftDepth = getMinDepth(treeNode.left) + 1;
-        int rightDepth = getMinDepth(treeNode.right) + 1;
-        return Math.min(leftDepth, rightDepth);
+
+        if (root.left == null && root.right == null) {
+            return 1;
+        }
+
+        int min_depth = Integer.MAX_VALUE;
+        if (root.left != null) {
+            min_depth = Math.min(minDepth(root.left), min_depth);
+        }
+        if (root.right != null) {
+            min_depth = Math.min(minDepth(root.right), min_depth);
+        }
+
+        return min_depth + 1;
     }
+
 }

@@ -1,5 +1,7 @@
 package dfsandbfs;
 
+import macleetcode.tree.TreeNode;
+
 import java.util.LinkedList;
 
 //错误，不是在同一棵树上找

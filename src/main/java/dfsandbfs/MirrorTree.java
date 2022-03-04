@@ -1,19 +1,11 @@
 package dfsandbfs;
 
 
+import macleetcode.tree.TreeNode;
+
 import java.util.LinkedList;
 
-class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
 
-    public TreeNode(int val) {
-        this.val = val;
-
-    }
-
-}
 
 /**
  * @Author: WYF
