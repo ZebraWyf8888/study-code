@@ -8,7 +8,7 @@ import java.util.HashMap;
  * subarraySum      请你统计并返回该数组中和为 k 的连续子数组的个数。
  * subarraySumMin   返回那个数组，要求他最短
  */
-public class Solution {
+public class SubArraySum {
     public int subarraySum(int[] nums, int k) {
         int count = 0, pre = 0;
         HashMap<Integer, Integer> mp = new HashMap<>();
@@ -24,7 +24,7 @@ public class Solution {
     }
 
 
-    public int[] subarraySumMin(int[] nums, int k) {
+    public static int[] subarraySumMin(int[] nums, int k) {
         int pre = 0;
         /**
          * key ：前缀和，value：索引
@@ -50,8 +50,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] ints = solution.subarraySumMin(new int[]{1, 2, 2, 1, 3, 1,2}, 6);
+        SubArraySum solution = new SubArraySum();
+        int[] ints = SubArraySum.subarraySumMin(new int[]{1, 2, 2, 1, 3, 1,2}, 6);
         printArray(ints);
     }
 
