@@ -12,7 +12,7 @@ import leetcode20220116.ListNode;
 //        this.next = next;
 //    }
 //}
-public class MergeTwo {
+public class 合并两个有序链表 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dum = new ListNode(0);
         ListNode cur = dum;

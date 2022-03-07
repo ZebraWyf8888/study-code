@@ -1,6 +1,6 @@
 package aaaahot;
 
-public class 二分 {
+public class 二分之旋转排序数组寻找两个有序数组的中位数 {
     /**
      *搜索旋转排序数组
      * @param nums

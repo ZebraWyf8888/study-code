@@ -4,7 +4,7 @@ import leetcode20220116.ListNode;
 
 import java.util.PriorityQueue;
 
-public class MergeKLists {
+public class 合并k个有序链表 {
     class Status implements Comparable<Status> {
         int val;
         ListNode ptr;
