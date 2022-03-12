@@ -1,6 +1,5 @@
 package aaaahot;
 
-import dfsandbfs.Node;
 import macleetcode.tree.TreeNode;
 
 import java.util.*;
@@ -13,6 +12,11 @@ import java.util.*;
  *      后序：递归、非递归
  * 广度优先：
  *      非递归的层次遍历
+ *
+ *  N叉树，前后序遍历
+ *
+ *  重建二叉树
+ *
  */
 public class 树的遍历相关 {
     /**
@@ -88,12 +92,18 @@ public class 树的遍历相关 {
                 stack.push(root);
                 root = root.left;
             }
+            //从栈中弹出的元素，左子树一定是访问完了的
             root = stack.pop();
+            //现在需要确定的是是否有右子树，或者右子树是否访问过
+            //如果没有右子树，或者右子树访问完了（也就是上一个访问的节点是右子节点时）
+            //说明可以访问当前节点
             if (root.right == null || root.right == pre) {
                 ans.add(root.val);
+                //更新历史访问记录，这样回溯的时候父节点可以由此判断右子树是否访问完成
                 pre = root;
                 root = null;
             }else {
+                //如果右子树没有被访问，那么将当前节点压栈，访问右子树
                 stack.push(root);
                 root = root.right;
             }
@@ -142,7 +152,7 @@ public class 树的遍历相关 {
      * @Author: WYF
      * @Date: 2020/4/18 15:10
      */
-    public static int getMaxDepth(Node treeNode) {
+    public static int getMaxDepth(TreeNode treeNode) {
         if (treeNode == null) {
             return 0;
         }
@@ -198,6 +208,64 @@ public class 树的遍历相关 {
             }
         }
         return res;
+    }
+
+    List<Integer> ans = new ArrayList<>();
+    List<Node> stack = new ArrayList<>();
+
+    class Node {
+        public int val;
+        public List<Node> children;
+
+        public Node() {}
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, List<Node> _children) {
+            val = _val;
+            children = _children;
+        }
+    }
+
+    /**
+     * n叉树后序
+     * @param root
+     * @return
+     */
+    public List<Integer> postorder(Node root) {
+        if (root == null) return ans;
+        Node temp = root;
+        stack.add(temp);
+        while(stack.size() > 0) {
+            temp = stack.remove(stack.size() - 1);
+            ans.add(temp.val);
+
+            for(Node child : temp.children){
+                stack.add(child);
+            }
+        }
+
+        Collections.reverse(ans);
+        return ans;
+    }
+
+    int[] preorder;
+    HashMap<Integer, Integer> dic = new HashMap<>();
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        this.preorder = preorder;
+        for(int i = 0; i < inorder.length; i++)
+            dic.put(inorder[i], i);
+        return recur(0, 0, inorder.length - 1);
+    }
+    TreeNode recur(int root, int left, int right) {
+        if(left > right) return null;                          // 递归终止
+        TreeNode node = new TreeNode(preorder[root]);          // 建立根节点
+        int i = dic.get(preorder[root]);                       // 划分根节点、左子树、右子树
+        node.left = recur(root + 1, left, i - 1);              // 开启左子树递归
+        node.right = recur(root + i - left + 1, i + 1, right); // 开启右子树递归
+        return node;                                           // 回溯返回根节点
     }
 
 }
