@@ -156,4 +156,53 @@ public class ThreadPrint {
             }
         }
     }
+
+    static public class PrintABCUsingLockCondition2 {
+        private int state;
+        private int time;
+        private static Lock lock = new ReentrantLock();
+        private static Condition c1 = lock.newCondition();
+        private static Condition c2 = lock.newCondition();
+        private static Condition c3 = lock.newCondition();
+
+        public PrintABCUsingLockCondition2(int t){
+            this.time = t;
+        }
+
+        public static void main(String[] args) {
+            PrintABCUsingLockCondition2 print = new PrintABCUsingLockCondition2(10);
+
+            new Thread(()->{
+                print.printNumber("A1",c1,c2,0);
+            }).start();
+
+            new Thread(()->{
+                print.printNumber("B2",c2,c3,1);
+            }).start();
+
+            new Thread(()->{
+                print.printNumber("C3",c3,c1,2);
+            }).start();
+        }
+
+        private void printNumber(String s, Condition c1, Condition c2, int tar) {
+            for (int j = 0; j < time; ) {
+                lock.lock();
+                try {
+                    while (state % 3 != tar){
+                        c1.await();
+                    }
+                    state++;
+                    j++;
+                    System.out.println(s);
+                    c2.signal();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }finally {
+                    lock.unlock();
+                }
+            }
+
+        }
+    }
 }
