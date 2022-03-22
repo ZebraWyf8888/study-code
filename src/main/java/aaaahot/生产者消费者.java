@@ -159,6 +159,84 @@ class ProducerAndConsumer2 {
     }
 }
 
+//跟2一样，只是实现了精确唤醒（notify）
+class ProducerAndConsumer22 {
+    private final int MAX_LEN = 10;
+    private Queue<Integer> queue = new LinkedList<Integer>();
+    private static final Lock lock = new ReentrantLock();
+    private static final Condition condition1 = lock.newCondition();
+    private static final Condition condition2 = lock.newCondition();
+    class Producer extends Thread {
+        @Override
+        public void run() {
+            producer();
+        }
+        private void producer() {
+            while(true) {
+                lock.lock();
+                try {
+                    while (queue.size() == MAX_LEN) {
+                        System.out.println("当前队列满");
+                        try {
+                            condition1.await();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    queue.add(1);
+                    condition2.signal();
+                    System.out.println("生产者生产一条任务，当前队列长度为" + queue.size());
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+    class Consumer extends Thread {
+        @Override
+        public void run() {
+            consumer();
+        }
+        private void consumer() {
+            while (true) {
+                lock.lock();
+                try {
+                    while (queue.size() == 0) {
+                        System.out.println("当前队列为空");
+                        try {
+                            condition2.await();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    queue.poll();
+                    condition1.signal();
+                    System.out.println("消费者消费一条任务，当前队列长度为" + queue.size());
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+    public static void main(String[] args) {
+        ProducerAndConsumer22 pc = new ProducerAndConsumer22();
+        Producer producer = pc.new Producer();
+        Consumer consumer = pc.new Consumer();
+        producer.start();
+        consumer.start();
+    }
+}
+
 //BlockingQueue版实现
 
 
