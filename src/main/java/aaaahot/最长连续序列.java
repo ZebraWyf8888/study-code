@@ -2,6 +2,9 @@ package aaaahot;
 
 import java.util.HashSet;
 
+/**
+ * 剑指 Offer II 119. 最长连续序列，这个是12345要连续
+ */
 public class 最长连续序列 {
 
     public int longestConsecutive(int[] nums) {
