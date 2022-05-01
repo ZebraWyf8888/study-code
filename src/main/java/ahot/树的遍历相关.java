@@ -38,11 +38,11 @@ public class 树的遍历相关 {
             /**
              * @Description: 处理当前节点
              */
-            ans.add(root.val);
+            ans.add(treeNode.val);
             if (treeNode.right != null) {
                 stack.push(treeNode.right);
             }
-            if (treeNode.left == null) {
+            if (treeNode.left != null) {
                 stack.push(treeNode.left);
             }
         }
