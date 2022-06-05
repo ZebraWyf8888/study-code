@@ -13,13 +13,25 @@ public class KMP {
         dp[0][pat.charAt(0)] = 1;
         // 影子状态 X 初始为 0
         int X = 0;
-        // 构建状态转移图（稍改的更紧凑了）
+        // 当前状态 j 从 1 开始
         for (int j = 1; j < M; j++) {
-            for (int c = 0; c < 256; c++)
-                dp[j][c] = dp[X][c];
-            dp[j][pat.charAt(j)] = j + 1;
+            for (int c = 0; c < 256; c++) {
+                if (pat.charAt(j) == c)
+                    dp[j][c] = j + 1;
+                else
+                    dp[j][c] = dp[X][c];
+            }
             // 更新影子状态
             X = dp[X][pat.charAt(j)];
+        }
+
+        for (int[] ap1:
+             dp) {
+            for (int a:
+                    ap1) {
+                System.out.print(a+ " ");
+            }
+            System.out.println();
         }
     }
 
@@ -36,5 +48,13 @@ public class KMP {
         }
         // 没到达终止态，匹配失败
         return -1;
+    }
+
+    public static void main(String[] args) {
+        KMP kmp =  new KMP("ab");
+        int adbcabda = kmp.search("adbcabda");
+
+        System.out.println(adbcabda);
+
     }
 }
