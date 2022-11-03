@@ -1,3 +1,5 @@
+package mydata;
+
 import com.alibaba.fastjson.JSONObject;
 
 import java.util.Set;

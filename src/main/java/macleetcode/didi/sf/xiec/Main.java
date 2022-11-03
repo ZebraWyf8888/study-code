@@ -77,11 +77,11 @@ public class Main {
 
     /**
      * Definition for a binary tree node.
-     * public class TreeNode {
+     * public class mydata.TreeNode {
      * int val;
-     * TreeNode left;
-     * TreeNode right;
-     * TreeNode(int x) { val = x; }
+     * mydata.TreeNode left;
+     * mydata.TreeNode right;
+     * mydata.TreeNode(int x) { val = x; }
      * }
      */
     //路径总和

@@ -173,16 +173,16 @@ public class Solution {
     public static void main(String[] args) {
 
         //[1,10,4,3,null,7,9,12,8,6,null,null,2]
-//        TreeNode treeNode1 = new TreeNode(1);
-//        TreeNode treeNode10 = new TreeNode(10);
-//        TreeNode treeNode4 = new TreeNode(4);
-//        TreeNode treeNode3 = new TreeNode(3);
-//        TreeNode treeNode7 = new TreeNode(7);
-//        TreeNode treeNode9 = new TreeNode(9);
-//        TreeNode treeNode12 = new TreeNode(12);
-//        TreeNode treeNode8 = new TreeNode(8);
-//        TreeNode treeNode6 = new TreeNode(6);
-//        TreeNode treeNode2 = new TreeNode(2);
+//        mydata.TreeNode treeNode1 = new mydata.TreeNode(1);
+//        mydata.TreeNode treeNode10 = new mydata.TreeNode(10);
+//        mydata.TreeNode treeNode4 = new mydata.TreeNode(4);
+//        mydata.TreeNode treeNode3 = new mydata.TreeNode(3);
+//        mydata.TreeNode treeNode7 = new mydata.TreeNode(7);
+//        mydata.TreeNode treeNode9 = new mydata.TreeNode(9);
+//        mydata.TreeNode treeNode12 = new mydata.TreeNode(12);
+//        mydata.TreeNode treeNode8 = new mydata.TreeNode(8);
+//        mydata.TreeNode treeNode6 = new mydata.TreeNode(6);
+//        mydata.TreeNode treeNode2 = new mydata.TreeNode(2);
 //
 //        treeNode1.left = treeNode10;
 //        treeNode1.right = treeNode4;
@@ -196,7 +196,7 @@ public class Solution {
 
 
 //        String str = "[11,12,8,3,7,11,null,null,null,20]";
-//        TreeNode node = TreeNode.mkTree(str);
+//        mydata.TreeNode node = mydata.TreeNode.mkTree(str);
 //        boolean evenOddTree = isEvenOddTree(node);
 //        System.out.println(evenOddTree);
 
@@ -206,7 +206,7 @@ public class Solution {
         //String s2 = "[11,18,14,3,7,null,null,null,null,18,null]";
         //需要返回false
         TreeNode node1 = TreeNode.mkTree(s1);
-        //TreeNode node2 = TreeNode.mkTree(s2);
+        //mydata.TreeNode node2 = mydata.TreeNode.mkTree(s2);
         boolean evenOddTree1 = isEvenOddTree(node1);
         System.out.println(evenOddTree1);
         //boolean evenOddTree2 = isEvenOddTree(node2);

@@ -42,7 +42,7 @@ public class LeetCode102 {
                     }
                 }else {
                     node = queue.pollFirst();
-                    //tree.TreeNode node = queue.poll();
+                    //tree.mydata.TreeNode node = queue.poll();
 
 
                     if (node.right != null) {

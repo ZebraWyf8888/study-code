@@ -4,7 +4,7 @@ package macleetcode.code1;////
 ////// 2： 必须类名必须是Main
 ////
 ////import java.util.Scanner;
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        Scanner scanner = new Scanner(System.in);
 ////        int N = scanner.nextInt();
@@ -49,7 +49,7 @@ package macleetcode.code1;////
 //// 2： 必须类名必须是Main
 //
 ////import java.util.Scanner;
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        Scanner scanner = new Scanner(System.in);
 ////        int n = scanner.nextInt();
@@ -84,7 +84,7 @@ package macleetcode.code1;////
 //// 2： 必须类名必须是Main
 //
 ////import java.util.Scanner;
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        //思路：找出元音+辅+元+辅的基本结构
 ////        //-》两个在中间的元音字母，且对于第二个元音，他左边和右边都有辅音字母
@@ -120,7 +120,7 @@ package macleetcode.code1;////
 ////
 ////import java.util.Scanner;
 ////
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        //典型的图问题
 ////        //我想想，先输入，然后遍历把
@@ -183,7 +183,7 @@ package macleetcode.code1;////
 //
 ////import java.util.Scanner;
 ////
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        Scanner scanner = new Scanner(System.in);
 ////        long l = scanner.nextLong();
@@ -215,7 +215,7 @@ package macleetcode.code1;////
 ////优化的做法是从后往前想-->这个晚点在想
 //
 ////import java.util.Scanner;
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        Scanner scanner = new Scanner(System.in);
 ////        int n = scanner.nextInt();
@@ -256,7 +256,7 @@ package macleetcode.code1;////
 //
 //import java.util.Scanner;
 
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //        int n = scanner.nextInt();
@@ -287,7 +287,7 @@ package macleetcode.code1;////
 //* @Create: 2020/4/28 21:41
 //* @Version: 1.0
 //*/
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //
 //    }
@@ -303,7 +303,7 @@ package macleetcode.code1;////
 //* @Create: 2020/4/28 21:40
 //* @Version: 1.0
 //*/
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();

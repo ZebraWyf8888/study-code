@@ -5,7 +5,7 @@ import java.util.*;
 ///**
 // * @author wangyifan
 // */
-//public class Main {
+//public class mydata.Main {
 //    public static String[] doLinux(String linux){
 //        String[] split = linux.split(" ");
 //        for(int i = 0;i<split.length;i++){

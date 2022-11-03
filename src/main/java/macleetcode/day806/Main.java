@@ -3,7 +3,7 @@ package macleetcode.day806;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-//public class day806.Main {
+//public class day806.mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int all = in.nextInt();
@@ -17,7 +17,7 @@ import java.util.Scanner;
 //        System.out.println(a);
 //    }
 //}
-// public class day806.Main {
+// public class day806.mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int N = in.nextInt();

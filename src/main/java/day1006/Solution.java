@@ -3,11 +3,11 @@ package day1006;//package day1006;
 //import java.util.List;
 //
 ////Definition for a binary tree node.
-//class TreeNode {
+//class mydata.TreeNode {
 //      int val;
-//      TreeNode left;
-//      TreeNode right;
-//      TreeNode(int x) { val = x; }
+//      mydata.TreeNode left;
+//      mydata.TreeNode right;
+//      mydata.TreeNode(int x) { val = x; }
 //}
 //
 //
@@ -16,7 +16,7 @@ package day1006;//package day1006;
 //
 //    }
 //
-//    public List<Integer> rightSideView(TreeNode root) {
+//    public List<Integer> rightSideView(mydata.TreeNode root) {
 //
 //    }
 //}

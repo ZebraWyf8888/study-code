@@ -1,3 +1,5 @@
+package mydata;
+
 public class 循环打印矩阵 {
     public static int[][] mark(int n){
         if(n == 0 ){

@@ -46,7 +46,7 @@ public class Main {
 //        return r;
 //    }
 }
-//}public class day806.Main {
+//}public class day806.mydata.Main {
 //    public static void main(String[] args) {
 //
 //        Scanner in = new Scanner(System.in);

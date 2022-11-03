@@ -2,7 +2,7 @@ package macleetcode.code2;//import java.util.Scanner;
 //
 ////import java.util.Scanner;
 ////
-//public class Main {
+//public class mydata.Main {
 //    static int[] a;
 //    static int[] ans;
 //    public static void main(String[] args) {
@@ -48,7 +48,7 @@ package macleetcode.code2;//import java.util.Scanner;
 
 //import java.util.Scanner;
 //
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
@@ -75,7 +75,7 @@ package macleetcode.code2;//import java.util.Scanner;
 
 
 
-//public class Main {
+//public class mydata.Main {
 //
 //
 //    /*请完成下面这个函数，实现题目要求的功能
@@ -157,7 +157,7 @@ package macleetcode.code2;//import java.util.Scanner;
 //import java.math.*;
 //import java.util.regex.*;
 //
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int anInt = in.nextInt();
@@ -239,7 +239,7 @@ public class Main {
 }
 //import java.util.Scanner;
 //
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int m = sc.nextInt();
@@ -279,7 +279,7 @@ public class Main {
 //import java.math.*;
 //import java.util.regex.*;
 //
-//public class Main {
+//public class mydata.Main {
 //    public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int anInt = in.nextInt();
@@ -430,7 +430,7 @@ public class Main {
 
 //import java.io.*;
 //import java.util.*;
-//public class Main
+//public class mydata.Main
 //{
 //    public static void main(String args[])
 //    {

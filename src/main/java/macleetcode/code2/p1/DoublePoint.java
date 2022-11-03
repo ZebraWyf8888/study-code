@@ -43,7 +43,7 @@ public class DoublePoint {
     }
 
     /**
-     * @Description: Main
+     * @Description: mydata.Main
      * @Param: [args]
      * @Return: void
      * @Author: WYF

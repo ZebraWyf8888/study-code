@@ -4,7 +4,7 @@ package macleetcode.code2.stack;//package macleetcode.stack;// 本题为考试�
 //import java.util.List;
 //import java.util.Scanner;
 //
-//public class Main {
+//public class mydata.Main {
 //    static int[] arr = new int[1000];
 //    static int start = 0;
 //    static int end = 0;
@@ -84,7 +84,7 @@ package macleetcode.code2.stack;//package macleetcode.stack;// 本题为考试�
 //// 本题为考试多行输入输出规范示例，无需提交，不计分。
 ////import java.util.Scanner;
 ////
-////public class Main {
+////public class mydata.Main {
 ////    public static void main(String[] args) {
 ////        Scanner sc = new Scanner(System.in);
 ////        int n = sc.nextInt();
@@ -112,7 +112,7 @@ package macleetcode.code2.stack;//package macleetcode.stack;// 本题为考试�
 //        import java.util.Scanner;
 //
 //
-//public class Main {
+//public class mydata.Main {
 //
 //    static  LinkedList s1;
 //    static  LinkedList s2;
