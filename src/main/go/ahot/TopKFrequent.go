@@ -39,3 +39,11 @@ func (h *IHeap) Pop() interface{} {
 	*h = old[0 : n-1]
 	return x
 }
+
+func main() {
+	var balance = []int{1,1,1,2,2,3}
+	frequent:= topKFrequent(balance, 2)
+	for  _,value := range frequent {
+		println(value)
+	}
+}

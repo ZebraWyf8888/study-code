@@ -44,6 +44,8 @@ public class 连续子数组的最大和 {
     }
 
     public static void main(String[] args) {
+//        数组去重
+//                正确的括号算法
         连续子数组的最大和 solution = new 连续子数组的最大和();
         int[] ans = new int[]{5,4,-1,7,8};
         int lengthOfLCIS = solution.findLengthOfLCIS(ans);

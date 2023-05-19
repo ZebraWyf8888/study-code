@@ -1,5 +1,6 @@
 package ahot;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -41,14 +42,19 @@ public class ThreadPrint {
                 if (state % 3 == targetNum) {
                     state++;
                     i++;
-                    System.out.print(name);
+                    System.out.println(name);
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
                 lock.unlock();
             }
         }
 
         public static void main(String[] args) {
-            PrintABCUsingLock loopThread = new PrintABCUsingLock(2);
+            PrintABCUsingLock loopThread = new PrintABCUsingLock(1000);
 
             new Thread(() -> {
                 loopThread.printLetter("B", 1);

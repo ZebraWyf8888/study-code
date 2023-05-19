@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class Data {
 
     public static void main(String[] args) throws IOException {
-
+        String aadasdsa = "";
         String[] arr = new String[]{
                 "5f8570baea8ceed36e64aa8a",
                 "5f856afa3e3d042cf5c61151",

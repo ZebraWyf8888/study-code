@@ -7,6 +7,10 @@ import (
 
 func main() {
 
+	SpiderNumPer := fmt.Sprintf("%.2f", (float64(2233-1233)/float64(1233)) * 100) // 保留2位小数
+	fmt.Print(SpiderNumPer)
+
+
 	//声明三个存放结果的channel
 
 	firstCh := make(chan string)

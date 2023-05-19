@@ -1,5 +1,6 @@
 package ahot;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -37,5 +38,13 @@ public class TopKFrequent {
         }
         return ret;
     }
+}
 
+class a{
+    public static void main(String[] args) {
+        TopKFrequent topKFrequent = new TopKFrequent();
+        int[] myList = {1,1,1,2,2,3};
+        int[] ints = topKFrequent.topKFrequent(myList, 2);
+        System.out.println(Arrays.toString(ints));
+    }
 }
