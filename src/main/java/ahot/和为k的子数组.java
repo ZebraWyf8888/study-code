@@ -15,6 +15,7 @@ public class 和为k的子数组 {
         HashMap<Integer, Integer> mp = new HashMap<>();
         mp.put(0, 1);
         for (int i = 0; i < nums.length; i++) {
+            //pre是持续递增的、从0到i的前缀和
             pre += nums[i];
             if (mp.containsKey(pre - k)) {
                 count += mp.get(pre - k);
