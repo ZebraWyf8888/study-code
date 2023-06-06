@@ -1,6 +1,6 @@
 package ahot;
 
-import macleetcode.tree.TreeNode;
+import leetcode.二叉树.TreeNode;
 
 import java.util.*;
 

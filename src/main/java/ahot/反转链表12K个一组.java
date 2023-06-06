@@ -1,8 +1,5 @@
 package ahot;
 
-
-import leetcode20220116.ListNode;
-
 public class 反转链表12K个一组 {
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode hair = new ListNode(-1);

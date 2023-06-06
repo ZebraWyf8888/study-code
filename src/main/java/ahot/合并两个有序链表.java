@@ -1,17 +1,5 @@
 package ahot;
 
-
-import leetcode20220116.ListNode;
-
-//class ListNode {
-//    int val;
-//    ListNode next;
-//    ListNode(int x) { val = x; }
-//    ListNode(int val, ListNode next) {
-//        this.val = val;
-//        this.next = next;
-//    }
-//}
 public class 合并两个有序链表 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dum = new ListNode(0);

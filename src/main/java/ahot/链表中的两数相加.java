@@ -1,6 +1,5 @@
 package ahot;
 
-import leetcode20220116.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

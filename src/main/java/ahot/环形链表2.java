@@ -1,7 +1,5 @@
 package ahot;
 
-import leetcode20220116.ListNode;
-
 public class 环形链表2 {
     public ListNode detectCycle(ListNode head) {
         if (head == null) {

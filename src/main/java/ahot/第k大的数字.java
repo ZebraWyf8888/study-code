@@ -1,7 +1,5 @@
 package ahot;
 
-import org.jetbrains.annotations.NotNull;
-
 public class 第k大的数字 {
     /**
      * 快排寻找第k大大数字，不交换节点
