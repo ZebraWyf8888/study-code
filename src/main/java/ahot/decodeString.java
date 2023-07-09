@@ -5,59 +5,68 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class decodeString {
-
-
-}
 class Solution {
+    int ptr;
+
     public String decodeString(String s) {
-        Deque<Integer> numStack = new ArrayDeque<>();
-        Deque<String> strStack = new ArrayDeque<>();
-        char[] chs = s.toCharArray();
-        int n = chs.length;
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < n; i++){
-            if(chs[i] - '0' >= 0 && chs[i] - '0' <= 9) { // 遇到数字
-                int num = 0;
-                while(chs[i] - '0' >= 0 && chs[i] - '0' <= 9){ // 截取数字
-                    num = num * 10 + chs[i] - '0';
-                    i++;
+        LinkedList<String> stk = new LinkedList<String>();
+        ptr = 0;
+
+        while (ptr < s.length()) {
+            char cur = s.charAt(ptr);
+            if (Character.isDigit(cur)) {
+                // 获取一个数字并进栈
+                String digits = getDigits(s);
+                stk.addLast(digits);
+            } else if (Character.isLetter(cur) || cur == '[') {
+                // 获取一个字母并进栈
+                stk.addLast(String.valueOf(s.charAt(ptr++)));
+            } else {
+                ++ptr;
+                LinkedList<String> sub = new LinkedList<String>();
+                while (!"[".equals(stk.peekLast())) {
+                    sub.addLast(stk.removeLast());
                 }
-                numStack.push(num);
-            }
-            if(chs[i] == '[') strStack.push(String.valueOf(chs[i])); // 遇到 '[' 推入字符串栈
-            else if(chs[i] == ']'){ // 遇到 ']'
-                StringBuilder curSb = new StringBuilder();
-                while(!strStack.peek().equals(String.valueOf('['))){ // 拼接 '[' 之前的字符串
-                    curSb.insert(0, strStack.pop());
+                Collections.reverse(sub);
+                // 左括号出栈
+                stk.removeLast();
+                // 此时栈顶为当前 sub 对应的字符串应该出现的次数
+                int repTime = Integer.parseInt(stk.removeLast());
+                StringBuffer t = new StringBuffer();
+                String o = getString(sub);
+                // 构造字符串
+                while (repTime-- > 0) {
+                    t.append(o);
                 }
-                strStack.pop(); // 推出 '['
-                int k = numStack.pop(); // 推出数字
-                String repeatedStr = repeate(curSb.toString(), k); // 重复 k 次
-                strStack.push(repeatedStr); // 然后推入字符串栈
+                // 将构造好的字符串入栈
+                stk.addLast(t.toString());
             }
-            else strStack.push(String.valueOf(chs[i]));
         }
-        StringBuilder res = new StringBuilder();
-        while(!strStack.isEmpty()){
-            res.insert(0, strStack.pop());
-        }
-        return res.toString();
+
+        return getString(stk);
     }
-    private String repeate(String s, int k){ // 倍增拼接 (快速幂思想)
-        StringBuilder res = new StringBuilder();
-        StringBuilder sb = new StringBuilder(s);
-        while(k > 0){
-            if(k % 2 == 1) res = res.append(sb);
-            sb = sb.append(sb);
-            k /= 2;
+
+    public String getDigits(String s) {
+        StringBuffer ret = new StringBuffer();
+        while (Character.isDigit(s.charAt(ptr))) {
+            ret.append(s.charAt(ptr++));
         }
-        return res.toString();
+        return ret.toString();
+    }
+
+    public String getString(LinkedList<String> v) {
+        StringBuffer ret = new StringBuffer();
+        for (String s : v) {
+            ret.append(s);
+        }
+        return ret.toString();
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String s = solution.decodeString("HG[3|B[2|CA]]F");
+//        HG[3|B[2|CA]]F
+//        HG3[B2[CA]]F
+        String s = solution.decodeString("HG3[B2[CA]]F");
         System.out.println(s);
     }
 }
