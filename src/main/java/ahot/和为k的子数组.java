@@ -51,7 +51,7 @@ public class 和为k的子数组 {
     }
 
     public static void main(String[] args) {
-        和为k的子数组 solution = new 和为k的子数组();
+//        和为k的子数组 solution = new 和为k的子数组();
         int[] ints = 和为k的子数组.subarraySumMin(new int[]{1, 2, 2, 1, 3, 1,2}, 6);
         printArray(ints);
     }

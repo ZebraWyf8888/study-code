@@ -2,7 +2,8 @@ package ahot;
 
 public class 二分之旋转排序数组寻找两个有序数组的中位数 {
     /**
-     *搜索旋转排序数组
+     * 搜索旋转排序数组
+     *
      * @param nums
      * @param target
      * @return
@@ -14,24 +15,26 @@ public class 二分之旋转排序数组寻找两个有序数组的中位数 {
             int pivot = low + (high - low) / 2;
             if (nums[pivot] == target) {
                 return pivot;
-            } else if (nums[pivot] < nums[high] ) {
+            } else if (nums[pivot] < nums[high]) {
                 if (target > nums[pivot] && target <= nums[high]) {
                     low = pivot + 1;
-                }else {
-                    high = pivot-1;
+                } else {
+                    high = pivot - 1;
                 }
             } else {
                 if (target >= nums[low] && target < nums[pivot]) {
-                    high = pivot-1;
-                }else {
+                    high = pivot - 1;
+                } else {
                     low = pivot + 1;
                 }
             }
         }
         return -1;
     }
+
     /**
      * 旋转数组的最小数字
+     *
      * @param numbers
      * @return
      */
@@ -53,6 +56,7 @@ public class 二分之旋转排序数组寻找两个有序数组的中位数 {
 
     /**
      * 寻找两个有序数组的中位数
+     *
      * @param nums1
      * @param nums2
      * @return

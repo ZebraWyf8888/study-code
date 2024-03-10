@@ -35,7 +35,7 @@ public class 限流算法1 {
         }
 
         //计数器+1
-        counters.get(new Long(currentWindowTime++));
+        counters.get(currentWindowTime++);
         return true;
     }
 

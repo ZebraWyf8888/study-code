@@ -95,7 +95,7 @@ class 滑动窗口限流算法 {
      */
     private synchronized int countCurrentWindow(long currentWindowTime) {
         //计算窗口开始位置
-        long startTime = currentWindowTime - SUB_CYCLE * (60 / SUB_CYCLE - 1);
+        long startTime = currentWindowTime - (long) SUB_CYCLE * (60 / SUB_CYCLE - 1);
         int count = 0;
 
         //遍历存储的计数器
