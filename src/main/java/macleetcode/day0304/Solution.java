@@ -33,7 +33,7 @@ public class Solution {
     }
 }
 //
-//class Solution {
+//class Solution.java {
 //    public int[] smallestK(int[] arr, int k) {
 //        int[] vec = new int[k];
 //        if (k == 0) { // 排除 0 的情况

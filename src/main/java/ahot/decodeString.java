@@ -1,11 +1,9 @@
 package ahot;
 
-import java.util.ArrayDeque;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.LinkedList;
 
-class Solution {
+class Solution2 {
     int ptr;
 
     public String decodeString(String s) {
@@ -63,7 +61,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution2 solution = new Solution2();
 //        HG[3|B[2|CA]]F
 //        HG3[B2[CA]]F
         String s = solution.decodeString("HG3[B2[CA]]F");

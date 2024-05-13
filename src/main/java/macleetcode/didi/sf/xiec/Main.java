@@ -1018,7 +1018,7 @@ public class Main {
         }
         return sell2;
     }
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/mai-mai-gu-piao-de-zui-jia-shi-ji-iii-by-wrnt/
 //    来源：力扣（LeetCode）
 
@@ -1069,7 +1069,7 @@ public class Main {
         return this.ans;
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetc-2/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -1089,7 +1089,7 @@ public class Main {
         return dp[s.length()];
     }
 
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/word-break/solution/dan-ci-chai-fen-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -1230,7 +1230,7 @@ class MyCircularQueue {
         return ret;
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/pascals-triangle/solution/yang-hui-san-jiao-by-leetcode-solution-lew9/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

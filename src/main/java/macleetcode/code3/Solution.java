@@ -1,7 +1,7 @@
 package macleetcode.code3;//import java.util.*;
 //
 //
-//public class Solution {
+//public class Solution.java {
 //    /**
 //     * 根据顾客属性计算出顾客排队顺序
 //     * @param a int整型一维数组 顾客a属性
@@ -57,7 +57,7 @@ package macleetcode.code3;//import java.util.*;
 //import java.util.*;
 //
 //
-//public class Solution {
+//public class Solution.java {
 //    /**
 //     * 返回无重复幂因子的 N进制完美数之和的所有幂因子
 //     * @param R int整型
@@ -78,7 +78,7 @@ package macleetcode.code3;//import java.util.*;
 import java.util.*;
 
 //
-//public class Solution {
+//public class Solution.java {
 //    /**
 //     * 返回无重复幂因子的 N进制完美数之和的所有幂因子
 //     * @param R int整型

@@ -50,7 +50,7 @@ public class 组合总和III {
     }
 }
 
-//class Solution {
+//class Solution.java {
 //    /**
 //     * 改进：把sum提取出来，方便剪枝
 //     * @param k

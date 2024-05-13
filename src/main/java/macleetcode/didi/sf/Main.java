@@ -70,7 +70,7 @@ public class Main {
     }
 
 
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/3sum-closest/solution/zui-jie-jin-de-san-shu-zhi-he-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -112,7 +112,7 @@ public class Main {
         return maxans;
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/longest-valid-parentheses/solution/zui-chang-you-xiao-gua-hao-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -149,7 +149,7 @@ public class Main {
         return -1;
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/sou-suo-xuan-zhuan-pai-xu-shu-zu-by-leetcode-solut/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -417,7 +417,7 @@ public class Main {
     }
 
     //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/restore-ip-addresses/solution/fu-yuan-ipdi-zhi-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -483,7 +483,7 @@ public class Main {
     }
 
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/you-xu-lian-biao-zhuan-huan-er-cha-sou-suo-shu-1-3/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -512,7 +512,7 @@ public class Main {
         return ans;
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/maximum-product-subarray/solution/cheng-ji-zui-da-zi-shu-zu-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -546,7 +546,7 @@ public class Main {
     }
 
     //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -586,7 +586,7 @@ public class Main {
         return cur;
     }
 
-    //    作者：LeetCode-Solution
+    //    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/house-robber-iii/solution/da-jia-jie-she-iii-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -632,7 +632,7 @@ public class Main {
         return maxans;
     }
 
-    //    public class Solution {
+    //    public class Solution.java {
 //        public int lengthOfLIS(int[] nums) {
 //            int len = nums.length;
 //            if (len <= 1) {
@@ -697,7 +697,7 @@ public class Main {
 //
 //        public static void main(String[] args) {
 //            int[] nums = new int[]{3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12};
-//            Solution solution = new Solution8();
+//            Solution.java solution = new Solution8();
 //            int lengthOfLIS = solution8.lengthOfLIS(nums);
 //            System.out.println("最长上升子序列的长度：" + lengthOfLIS);
 //        }
@@ -751,7 +751,7 @@ public class Main {
     }
 
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/water-and-jug-problem/solution/shui-hu-wen-ti-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -806,7 +806,7 @@ public class Main {
         }
     }
 //
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/solution/zui-chang-lian-xu-di-zeng-xu-lie-by-leet-dmb8/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

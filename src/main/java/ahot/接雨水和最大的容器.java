@@ -27,7 +27,7 @@ public class 接雨水和最大的容器 {
     }
 
 //接雨水
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/trapping-rain-water/solution/jie-yu-shui-by-leetcode-solution-tuvc/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -48,7 +48,7 @@ public class 接雨水和最大的容器 {
         return ans;
     }
 //11. 盛最多水的容器
-//    作者：LeetCode-Solution
+//    作者：LeetCode-Solution.java
 //    链接：https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-by-leetcode-solution/
 //    来源：力扣（LeetCode）
 //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

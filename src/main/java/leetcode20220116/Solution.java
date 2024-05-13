@@ -35,7 +35,7 @@ class Solution {
 }
 
 /**
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(head);
+ * Your Solution.java object will be instantiated and called as such:
+ * Solution.java obj = new Solution.java(head);
  * int param_1 = obj.getRandom();
  */

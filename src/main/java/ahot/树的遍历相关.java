@@ -174,7 +174,7 @@ public class 树的遍历相关 {
      *      的右孩子置空，将 xx 的值加入答案数组，然后访问 xx 的右孩子，
      *      即 x = x.\textit{right}x=x.right。
      *
-     * 作者：LeetCode-Solution
+     * 作者：LeetCode-Solution.java
      * 链接：https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/
      * 来源：力扣（LeetCode）
      * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

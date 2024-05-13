@@ -8,7 +8,7 @@ package java8.com.offer;
  * 链接：https://www.nowcoder.com/questionTerminal/c6c7742f5ba7442aada113136ddea0c3?answerType=1&f=discussion
  * 来源：牛客网
  * <p>
- * public class Solution {
+ * public class Solution.java {
  * public int Fibonacci(int n) {
  * if(n == 0){
  * return 0;

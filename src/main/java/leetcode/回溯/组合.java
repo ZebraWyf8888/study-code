@@ -47,7 +47,7 @@ public class 组合 {
     }
 }
 
-//class Solution {
+//class Solution.java {
 //    public List<List<Integer>> combine(int n, int k) {
 //        LinkedList<Integer> stack = new LinkedList<>();
 //        List<List<Integer>> res = new ArrayList<>();

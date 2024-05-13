@@ -71,6 +71,37 @@ public class Main4 {
         sort(a, low, i - 1);
         sort(a, j + 1, high);
     }
+
+    public static void sortV2(int[] a, int low, int high) {
+        int i = low;
+        ;
+        int j = high;
+        int temp = a[low];
+        while (i < j) {
+            while (temp <= a[j] && i < j) {
+                j--;
+            }
+            while (temp >= a[i] && i < j) {
+                i++;
+            }
+
+            if (i == j) {
+                int temp2 = a[j];
+                a[j] = a[i];
+                a[i] = temp2;
+            }
+        }
+        if (i == j) {
+            int temp3 = a[j];
+            a[j] = a[low];
+            a[low] = temp3;
+        }
+        //核心3 递归嘛 我干一点然后交给别人去干就行了
+        sort(a, low, i - 1);
+        sort(a, j + 1, high);
+
+    }
+
 }
 
 //注意：
