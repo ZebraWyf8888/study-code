@@ -18,7 +18,7 @@ func convertAndPadDecimalToHex(decimalInput int, length int) (string, error) {
 func main() {
 	// 输入的十进制数字
 	decimalInput := 34556
-	00000000000086fc
+	//00000000000086fc
 	// 补全为长度为 16 的十六进制字符串
 	paddedHex, err := convertAndPadDecimalToHex(decimalInput, 16)
 	if err != nil {
